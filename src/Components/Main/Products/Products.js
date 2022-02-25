@@ -41,7 +41,7 @@ const Products = ({ products }) => {
                             </div>
                         </Link>
                         <div className="innerLinks">
-                            <div className="float">
+                            <div onClick={e=>{addToCart(product, e)}} className="float">
                                 <BsCart4 className='cartIcon' />
                             </div>
                             <div className="float like liked">
@@ -54,7 +54,7 @@ const Products = ({ products }) => {
                 }
                 
                 <div ref={popupRef} className="popup">Product added... 
-                    <Link to="/cart"><div>go to cart</div></Link>
+                    <Link to="/cart"><div>click here go to cart</div></Link>
                     <span className="closePopup" onClick={removePopup}><FaTimes /></span>
                 </div>
         </section>

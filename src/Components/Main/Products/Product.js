@@ -36,13 +36,9 @@ const Product = ({ product, onAdd }) => {
                             </Link>
                             <div className="rating">
                                 {stars.map((_, index)=>(
-                                    <IoStarSharp 
+                                    <IoStarSharp className="star"
                                         key = {index} 
                                         color={(rating) > index ? colors.blue: colors.gray}
-                                        // color={(hoverRating || starRating) > index ? colors.blue: colors.gray}
-                                        // onClick={()=>handleStarRating(index + 1)}
-                                        // onMouseOver={()=>handlehoverRating(index + 1)}
-                                        // onMouseLeave = {handleMouseLeaveRating}
                                     />
                                 ))}
                                 <span className='reviews'>- 2700 reviews</span>

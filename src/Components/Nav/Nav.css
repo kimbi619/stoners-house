@@ -177,7 +177,6 @@ nav .caption {
   font-family: 'quicksand', sans-serif;
   overflow: hidden;
   position: relative;
-  margin-bottom: 2rem;
 }
 .carosel * {
   pointer-events: none;
@@ -251,6 +250,13 @@ nav .caption {
   .logout {
     display: none;
   }
+  .caWrap {
+    display: none;
+  }
+
+  .categoryDesktop {
+    display: block;
+  }
 }
 @media (min-width: 50rem) {
   .nav {
@@ -276,4 +282,25 @@ nav .caption {
   .burgerMenu {
     display: none;
   }
+}
+
+/* ==================================================================================== */
+/* ==================================================================================== */
+/* ==================================================================================== */
+
+.categoryListItem {
+  display: inline-flex;
+  margin: 1rem;
+  align-items: center;
+}
+
+.categoryListItem .weaponIcon {
+  font-size: 1.8rem;
+  margin: 0.3rem;
+}
+
+.categoryListItem:hover {
+  color: #0078a7;
+  text-decoration: underline;
+  cursor: pointer;
 }

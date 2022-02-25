@@ -9,6 +9,7 @@ import CategoryCarousel from './Components/Nav/CategoryCarousel';
 import useLocalStorage from './UseLocalStorage';
 import HomePage from './Components/HomePage';
 import app from './fire'
+import CategoryDesktop from './Components/Nav/CategoryDesktop';
 
 
 
@@ -35,7 +36,10 @@ function App() {
   return (
     <div className="App">
       <Nav products={products} />
-      <Route path="/products" exact><CategoryCarousel onFilter={handleFilter} products={products} /></Route>
+      <Route path="/products" exact>
+        <CategoryCarousel className='categoryMobile' onFilter={handleFilter} products={products} />
+        <CategoryDesktop className='categoryDesktop' />
+      </Route>
       <Main products={products} />
       
       <Switch>

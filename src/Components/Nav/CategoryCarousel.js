@@ -41,7 +41,7 @@ const CategoryCarousel = ({products, onFilter}) => {
         },
     ]
     return (
-        <>
+        <div className="caWrap">
             <Carousel 
                 enableAutoPlay autoPlaySpeed={2300} 
                 breakPoints={breakPoints} 
@@ -68,7 +68,7 @@ const CategoryCarousel = ({products, onFilter}) => {
                     </div>
                 </Item>
             </Carousel>
-        </>
+        </div>
     )
 }
 

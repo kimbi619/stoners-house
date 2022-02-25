@@ -32,12 +32,14 @@
 }
 .price-discount,
 .name-rate {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-block: 0.4rem;
 }
 .name {
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
   text-transform: capitalize;
@@ -47,59 +49,28 @@
 .name:hover {
   text-decoration: underline;
 }
+.star .reviews {
+  display: block;
+}
+.reviews {
+  margin-top: 0.2rem;
+}
 
+.rating {
+  display: flex;
+  align-items: center;
+}
 .price {
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   color: var(--secondaryColor);
   text-align: right;
   color: var(--dark-light);
+  margin: 0;
 }
 .discount {
-  /* margin-top: 0.3rem; */
+  font-size: 0.8rem;
   color: crimson;
-}
-
-.dropDownWrapper {
-  position: relative;
-}
-.dropDown {
-  background: #c7c7c7;
-  padding: 0.5rem;
-  /* border-radius: 6px 6px 0rem 0rem; */
-  display: flex;
-  flex-wrap: nowrap;
-  cursor: pointer;
-}
-.dropDownIndicator {
-  border-left: 1px solid gray;
-  margin-left: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-.dropDownList {
-  box-shadow: 2px 3px 6px 2px rgba(0, 0, 0, 0.178);
-  padding: 0rem 0.5rem 0.3rem 0.5rem;
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  background: white;
-  z-index: 1;
-  display: none;
-  /* display: none; */
-}
-.dropDownItem {
-  padding-block: 0.5rem;
-  font-size: var(--fs-xs);
-  border-bottom: 1px solid rgb(218, 218, 218);
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  cursor: pointer;
-}
-
-.toggleDropDown {
-  display: block;
 }
 
 .popup {

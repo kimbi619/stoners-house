@@ -1,8 +1,9 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Cart.css'
 import { IoStarSharp } from 'react-icons/io5'
 
-const CartItem = ({ product, onRemove }) => {
+const CartItem = ({ product, onRemove, onCartChange }) => {
+    const [itemCount, setItemCount] = useState(1)
     let medias = [];
     const stars = Array(5).fill(0);
     const colors={
@@ -23,16 +24,22 @@ const CartItem = ({ product, onRemove }) => {
         onRemove(id)
     }
     
-
-
+    if(itemCount <= 0){
+        setItemCount(1)
+    }
+    product.fields.count = parseInt(itemCount)
+    
+    const getRealCount = (e)=>{
+        onCartChange(e, parseInt(itemCount))
+    }
     return (
         <div>
-            <div className="cartItemWrapper">
+            <div onChange={(e) => {getRealCount(e)}} className="cartItemWrapper">
                 <div className="cartFlexItem cartImageWrapper">
                     <img src={medias[0]} alt={name} />
                 </div>
                 <div className="cartFlexItem cartDescription">
-                    <h3 className="cartItemName">Product category</h3>
+                    <h3 className="cartItemName">{name}</h3>
                     <div className="rating remove">
                         {stars.map((_, index)=>(
                             <IoStarSharp key = {index} color={(productRatings) > index ? colors.blue: colors.gray}/>
@@ -45,7 +52,7 @@ const CartItem = ({ product, onRemove }) => {
                     <div className="cartPrice">${price}</div>
                     <div className="cartBtnControl">
                         <span onClick={removeItem} className="cartBtn">remove</span>
-                        <span className="cartBtn cartSaveToLater remove">save to later</span>
+                        <span className="cartBtn cartSaveToLater remove">save</span>
                     </div>
                 </div>
             </div>

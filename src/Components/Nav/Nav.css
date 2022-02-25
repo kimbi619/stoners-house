@@ -16,11 +16,12 @@
 
 .search {
   width: 60%;
-  max-width: 22.5rem;
+  max-width: 15.5rem;
   height: 35px;
   position: relative;
   background: var(--light-gray);
   border-radius: 100px;
+  border: 1px solid #bbbbbb;
 }
 
 .searchInput {
@@ -31,7 +32,10 @@
   height: 100%;
   padding-inline: 1rem;
   background: transparent;
-  font-size: var(--fs-sm);
+  font-size: var(--fs-xs);
+}
+.searchInput::placeholder {
+  opacity: 0.7;
 }
 .searchIcon {
   outline: none;
@@ -42,9 +46,10 @@
   right: 0;
   z-index: 2;
   height: 100%;
-  font-size: var(--fs-sm);
-  padding: 0.4rem 0.8rem;
+  font-size: var(--fs-xs);
+  padding: 0.6rem 0.8rem;
   color: var(--secondaryColor);
+  opacity: 0.4;
 }
 
 .burgerMenu {
@@ -59,7 +64,7 @@
 .searchFilter {
   position: absolute;
   width: 95%;
-  max-width: 38rem;
+  max-width: 58rem;
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
@@ -100,11 +105,12 @@ nav {
   z-index: 10;
   color: white;
   text-align: center;
-  font-family: "quicksand", sans-serif;
+  font-family: 'quicksand', sans-serif;
   padding-top: 4rem;
   transform: scale(0, 1);
   transition: all 0.2s ease-in-out;
   transform-origin: top left;
+  max-width: 600px;
 }
 .logoCaption {
   margin-block: 4rem;
@@ -118,6 +124,7 @@ nav .caption {
 }
 .navList a {
   color: white;
+  outline: none;
 }
 
 .logout {
@@ -167,7 +174,7 @@ nav .caption {
   overflow: hidden;
   font-size: var(--fs-xs);
   text-transform: capitalize;
-  font-family: "quicksand", sans-serif;
+  font-family: 'quicksand', sans-serif;
   overflow: hidden;
   position: relative;
   margin-bottom: 2rem;
@@ -206,6 +213,9 @@ nav .caption {
 .new {
   width: 400px;
   height: 300px;
+}
+.nav .container {
+  margin: 0;
 }
 
 /* ====================================================================================== */
@@ -249,6 +259,7 @@ nav .caption {
     align-items: center;
     width: 95%;
     margin: auto;
+    margin-bottom: 2rem;
   }
   .navList a {
     color: var(--primaryColor);

@@ -3,13 +3,14 @@ import { IoIosArrowDown } from 'react-icons/io'
 import { IoCartOutline } from 'react-icons/io5'
 import { FiBookmark } from 'react-icons/fi'
 import { IoStarSharp } from 'react-icons/io5'
+import { Link } from 'react-router-dom'
 
 const Product = ({ product, onAdd }) => {
 
-    const {name,price, productRatings} = product.fields;
+    const {name,price, rating} = product.fields;
     const stars = Array(5).fill(0);
     const colors={
-        blue: "blue",
+        blue: "#EFAD15",
         gray: "#a9a9a9"
     }
     const addProductToCart = (product,e)=>{
@@ -28,39 +29,28 @@ const Product = ({ product, onAdd }) => {
             <div className="product">
                 
                 <div className="productDesc">
-                    <div className="price-rate">
-                        <div className="name">{name}</div>
-                        <p className="price">${price}</p>
-                        <div className="rating">
-                            {stars.map((_, index)=>(
-                                <IoStarSharp 
-                                    key = {index} 
-                                    color={(productRatings) > index ? colors.blue: colors.gray}
-                                    // color={(hoverRating || starRating) > index ? colors.blue: colors.gray}
-                                    // onClick={()=>handleStarRating(index + 1)}
-                                    // onMouseOver={()=>handlehoverRating(index + 1)}
-                                    // onMouseLeave = {handleMouseLeaveRating}
-                                />
-                            ))}
-
+                    <div className="name-price-flex">
+                        <div className="name-rate">
+                            <Link to={`/product/${product.sys.id}`}> 
+                                <span className="name">{name}</span>
+                            </Link>
+                            <div className="rating">
+                                {stars.map((_, index)=>(
+                                    <IoStarSharp 
+                                        key = {index} 
+                                        color={(rating) > index ? colors.blue: colors.gray}
+                                        // color={(hoverRating || starRating) > index ? colors.blue: colors.gray}
+                                        // onClick={()=>handleStarRating(index + 1)}
+                                        // onMouseOver={()=>handlehoverRating(index + 1)}
+                                        // onMouseLeave = {handleMouseLeaveRating}
+                                    />
+                                ))}
+                                <span className='reviews'>- 2700 reviews</span>
+                            </div>
                         </div>
-                    </div>
-                    <div className="dropDownWrapper">
-                        <div className="placeOrder">
-                            <div className="dropDown">
-                                <p>place order</p>
-                                <span className="dropDownIndicator"><IoIosArrowDown onClick={showDropDown} /></span>
-                            </div>
-                            <div className="dropDownList">
-                                <p className="dropDownItem">
-                                    <span onClick={(e)=>addProductToCart(product, e)}>Add to cart</span>
-                                    <span><IoCartOutline /></span>
-                                </p>
-                                <p className="dropDownItem">
-                                    <span>Reserve</span>
-                                    <span><FiBookmark /></span>
-                                </p>
-                            </div>
+                        <div className="price-discount">
+                            <p className="price">${price}</p>
+                            <p className="price discount">50% off$ {price}</p>
                         </div>
                     </div>
                 </div>

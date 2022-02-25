@@ -33,7 +33,9 @@ const Cart = () => {
                 {
                     
                     cart.length < 1?
-                    <h2 className="emptyCart">cart is empty</h2>
+                    <div className='notAvailable'>
+                        <h1 className='empty'>Cart is empty</h1>
+                    </div>
                     :cart.map(cartItem=>(
                         // <h3 key={cartItem.product.sys.id}>{cartItem.product.fields.name}</h3>
                         <div key={cartItem.product.sys.id}>
@@ -43,8 +45,10 @@ const Cart = () => {
                 }
             </div>
             <div className="cartCheckOutSection">
-                <h3 className="cartItemName">Total</h3>
-                <h1 className="totalPrice">${totalPrice.toFixed(2)}</h1>
+                <div className="totalWrapper">
+                    <h3 className="cartItemName">Total</h3>
+                    <h1 className="totalPrice">${totalPrice.toFixed(2)}</h1>
+                </div>
                     <button className={`buyBtn productPlaceOrder checkout ${cart.length < 1?"payDisable": ""}`}>Checkout</button>
             </div>
         </div>

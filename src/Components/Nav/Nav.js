@@ -98,8 +98,9 @@ const Nav = ({ products }) => {
                         <Link to="/products" exact><li className="navLink">Products</li></Link>
                         <Link to="/contact-us"><li className="navLink">Contact us</li></Link>
                         <Link to="/about"><li className="navLink">About</li></Link>
-                        <Link to="/register/signup"><li className="navLink">Account</li></Link>
                         <Link to="/cart"><li className="navLink">Cart</li></Link>
+                        <Link to=""><li className="navLink">Save</li></Link>
+                        <Link to="/register/signup"><li className="navLink">Account</li></Link>
                     </ul>
                     <div className="logout">Log out</div>
                 </nav>

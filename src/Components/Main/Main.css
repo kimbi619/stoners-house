@@ -1,11 +1,13 @@
 .product {
-  width: 100%;
-  border-bottom: 1.1rem;
-  margin-top: 1rem;
+  background: #ececec42;
 }
+.buyers_top_list {
+  margin: 21rem 0rem;
+}
+
 .productImgWrapper {
   width: 100%;
-  height: 12.1875rem;
+  height: 15.1875rem;
   overflow: hidden;
 }
 
@@ -15,31 +17,56 @@
 .productDesc {
   display: flex;
   justify-content: space-between;
-  padding-block: 1rem;
+  padding: 0.6rem;
   font-size: var(--fs-xs);
 }
 
-.name {
-  display: inline;
-  margin-right: 0.4rem;
+.name-price-flex {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
-.price {
-  display: inline;
-  font-size: 0.75rem;
-  color: var(--secondaryColor);
-  font-style: italic;
+.reviews {
+  font-size: 0.8rem;
+  color: var(--dark-light);
+}
+.price-discount,
+.name-rate {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.name {
+  font-size: 1rem;
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: capitalize;
+  font-weight: 400;
+  color: var(--black);
+}
+.name:hover {
+  text-decoration: underline;
 }
 
-.rating * {
-  cursor: pointer;
+.price {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--secondaryColor);
+  text-align: right;
+  color: var(--dark-light);
 }
+.discount {
+  /* margin-top: 0.3rem; */
+  color: crimson;
+}
+
 .dropDownWrapper {
   position: relative;
 }
 .dropDown {
   background: #c7c7c7;
   padding: 0.5rem;
-  border-radius: 6px 6px 0rem 0rem;
+  /* border-radius: 6px 6px 0rem 0rem; */
   display: flex;
   flex-wrap: nowrap;
   cursor: pointer;
@@ -106,6 +133,43 @@
 }
 .closePopup * {
   pointer-events: none;
+}
+
+.productItem {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.float {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 30%;
+  left: 0;
+  transform: translate(30%, 10%);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+.like {
+  transform: translate(calc(130% + 10px), 10%);
+}
+.liked {
+  color: rgb(255, 133, 158);
+}
+.cartIcon {
+  transition: all 0.2s ease-in-out;
+}
+.float:hover {
+  width: 2.9375rem;
+  height: 2.9375rem;
+}
+.float:hover .cartIcon {
+  font-size: 1.4rem;
 }
 @media (min-width: 35rem) {
   .productGridWrapper {

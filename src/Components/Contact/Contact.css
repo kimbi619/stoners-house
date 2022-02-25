@@ -1,0 +1,50 @@
+.contactPage {
+  color: #42435d;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.getInTouch {
+  width: 45%;
+  max-width: 450px;
+}
+.getInTouch h1 {
+  text-transform: capitalize;
+}
+.contactFormField {
+  border: 1px solid #bbbbbb81;
+  width: 100%;
+  display: block;
+  padding: 0.6rem;
+  margin-block: 0.5rem;
+  outline: none;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.contactFormField::placeholder {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.messageSubmit {
+  border: none;
+  color: white;
+  background-color: rgb(247, 91, 130);
+  font-family: 'montserrat';
+  font-weight: 700;
+}
+.addresses {
+  display: grid;
+  grid-gap: 1.2rem;
+}
+.addresses h1 {
+  font-size: 1.3rem;
+  font-family: 'montserrat';
+}
+.rapidContactText {
+  text-align: center;
+  margin: 2rem;
+}
+@media (min-width: 35rem) {
+  .addresses {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

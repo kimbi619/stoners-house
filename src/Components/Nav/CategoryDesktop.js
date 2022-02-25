@@ -1,11 +1,11 @@
 import React from 'react'
 import { GiMedicines, GiCrossedPistols, GiChestnutLeaf, GiOverkill, GiAmmoBox, GiMachineGunMagazine } from 'react-icons/gi'
-import { RiArrowLeftLine } from 'react-icons/ri'
+import { BsFillArrowLeftCircleFill } from 'react-icons/bs'
 const CategoryDesktop = () => {
   return (
     <div className='container'>
         <ul className='categoryList'>
-            <li className='categoryListItem'><RiArrowLeftLine className='weaponIcon' /> Back</li>
+            <li className='categoryListItem'><BsFillArrowLeftCircleFill className='weaponIcon' /> Back</li>
             <li className='categoryListItem'><GiMedicines className='weaponIcon' /> Pills</li>
             <li className='categoryListItem'><GiCrossedPistols className='weaponIcon' /> Glock</li>
             <li className='categoryListItem'><GiChestnutLeaf className='weaponIcon' /> Weed</li>

@@ -1,13 +1,20 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useContext } from 'react'
 import { FcMenu } from 'react-icons/fc'
 import './Nav.css';
 import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../Main/CartContext';
 
 
 const Nav = ({ products }) => {
-
     const [searchItems, setSearchItems] = useState([])
+    const [cartCount, setCartCount] = useState(0)
+    const [cart, setCart] = useContext(CartContext);
+
+    const background = useRef('')
+    const searchItemList = useRef('')
+    const searchField = useRef('');
+
     // toggle navigation for mobile view 
     const toggleNav = (e)=>{
         const navigation = e.target.parentElement.parentElement.nextElementSibling.nextElementSibling;
@@ -19,9 +26,7 @@ const Nav = ({ products }) => {
             e.target.parentElement.parentElement.parentElement.classList.remove('showNav')
         }
     }
-    const background = useRef('')
-    const searchItemList = useRef('')
-    const searchField = useRef('');
+
     // search function to find particular item using regular expressions
     const searchProducts=(e)=>{
         const searchValue = e.target.value.toLowerCase();
@@ -48,6 +53,7 @@ const Nav = ({ products }) => {
     const removeList = (e)=>{
         // background.current.style.display="none";
     }
+
     const removeSearch = (e)=>{
         background.current.style.display="none";
         searchItemList.current.style.display="none";
@@ -98,7 +104,7 @@ const Nav = ({ products }) => {
                         <Link to="/products" exact><li className="navLink">Products</li></Link>
                         <Link to="/contact-us"><li className="navLink">Contact us</li></Link>
                         <Link to="/about"><li className="navLink">About</li></Link>
-                        <Link to="/cart"><li className="navLink">Cart</li></Link>
+                        <Link to="/cart"><li className="navLink cart">Cart<span className={`${cart.length === 0 && 'zeroCartSize'} cartSize`}>{cart.length}</span></li></Link>
                         <Link to=""><li className="navLink">Save</li></Link>
                         <Link to="/register/signup"><li className="navLink">Account</li></Link>
                     </ul>

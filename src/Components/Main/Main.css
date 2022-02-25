@@ -79,7 +79,7 @@
   margin: auto;
   position: fixed;
   bottom: 0;
-  background: #b4b4b45d;
+  background: #f0f0f0d0;
   color: var(--dark-light);
   text-align: center;
   left: 50%;
@@ -99,7 +99,9 @@
   top: 0;
   right: 0;
   padding: 0.5rem;
-  color: rgb(255, 81, 110);
+  color: rgb(255, 180, 191);
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 .closePopup * {
   pointer-events: none;
@@ -123,6 +125,7 @@
   transform: translate(30%, 10%);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  outline: none;
   outline: none;
 }
 .like {

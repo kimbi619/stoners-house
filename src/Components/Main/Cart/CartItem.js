@@ -11,7 +11,7 @@ const CartItem = ({ product, onRemove, onCartChange }) => {
     let medias = [];
     const stars = Array(5).fill(0);
     const colors={
-        blue: "#F7C700",
+        blue: "#EFAD15",
         gray: "#a9a9a9"
     }
 
@@ -22,7 +22,7 @@ const CartItem = ({ product, onRemove, onCartChange }) => {
     }
 
 
-    const {name, productRatings, price} = product.fields
+    const {name, rating, price} = product.fields
     const id = product.sys.id;
     const removeItem = (e)=>{
         onRemove(id)
@@ -54,13 +54,16 @@ const CartItem = ({ product, onRemove, onCartChange }) => {
                     <h3 className="cartItemName">{name}</h3>
                     <div className="rating remove">
                         {stars.map((_, index)=>(
-                            <IoStarSharp key = {index} color={(productRatings) > index ? colors.blue: colors.gray}/>
+                            <IoStarSharp className="star"
+                                key = {index} 
+                                color={(rating) > index ? colors.blue: colors.gray}
+                            />
                         ))}
                         <div className="cartNumbers remove">2123 sold . All Levels</div>
                     </div>
-                    <div className="cartMobilePrice">${price}</div>
                 </div>
                 <div className="cartFlexItem cartControl">
+                    <div className="cartMobilePrice">${price}</div>
                     <div className="cartPrice">${price}</div>
                     <div className="cartBtnControl">
                         <span onClick={removeItem} className="cartBtn">remove</span>

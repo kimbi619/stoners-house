@@ -41,7 +41,8 @@ const CategoryDesktop = ({ filterProduct, products }) => {
     let filteredP = products.filter(product => product.fields.category === cat)
     setFilteredProduct(filteredP)
   }
-  console.log(filteredProduct)
+
+
   return (
     <div className='container'>
         <ul className='categoryList'>

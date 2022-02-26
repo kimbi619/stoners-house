@@ -59,11 +59,11 @@ const Products = ({ fetchedProducts }) => {
                             </div>
                         </Link>
                         <div className="innerLinks">
-                            <div onClick={e=>{addToCart(product, e)}} className="float">
-                                <BsCart4 className='cartIcon' />
+                            <div className="float">
+                                <BsCart4 onClick={e=>{addToCart(product, e)}} className='cartIcon' />
                             </div>
-                            <div onClick={e=>{addToStore(product)}}  className={`float like ${product.fields.isLiked && 'liked'}`}>
-                                <BsFillSuitHeartFill className='cartIcon' />
+                            <div  className={`float like ${product.fields.isLiked && 'liked'}`}>
+                                <BsFillSuitHeartFill onClick={e=>{addToStore(product)}} className='cartIcon' />
                             </div>
                         </div>
                         <Product onAdd={addToCart} product={product} />

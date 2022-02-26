@@ -23,7 +23,7 @@ const Store = () => {
   }
   
   return (
-    <div className='container'>
+    <div className='store container'>
       {
         store.length < 1 ? (
           <>

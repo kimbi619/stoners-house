@@ -138,6 +138,8 @@
 }
 .cartIcon {
   transition: all 0.2s ease-in-out;
+  outline: none;
+  margin: 0;
 }
 .float:hover {
   width: 2.9375rem;

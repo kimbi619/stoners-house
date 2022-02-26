@@ -22,8 +22,9 @@ const Nav = ({ products }) => {
     }
 
     const removeNav = (e)=>{
-        if(e.target.className === 'navLink'){
-            e.target.parentElement.parentElement.parentElement.classList.remove('showNav')
+        if(e.target.className === 'lsd'){
+            const navigation = e.target.parentElement.parentElement.parentElement
+            navigation.classList.remove('showNav')
         }
     }
 
@@ -101,12 +102,12 @@ const Nav = ({ products }) => {
                         <div className="caption">Fill with Caption</div>
                     </div>
                     <ul className="navList">
-                        <Link to="/products" ><li className="navLink">Products</li></Link>
-                        <Link to="/contact-us"><li className="navLink">Contact us</li></Link>
-                        <Link to="/about"><li className="navLink">About</li></Link>
-                        <Link to="/cart"><li className="navLink cart">Cart<span className={`${cart.length === 0 && 'zeroCartSize'} cartSize`}>{cart.length}</span></li></Link>
-                        <Link to="/store"><li className="navLink">Save</li></Link>
-                        <Link to="/register/signup"><li className="navLink">Account</li></Link>
+                        <li className="navLink"><Link className='lsd' to="/products" >Products</Link></li>
+                        <li className="navLink"><Link className='lsd' to="/contact-us">Contact us</Link></li>
+                        <li className="navLink"><Link className='lsd' to="/about">About</Link></li>
+                        <li className="navLink cart"><Link className='lsd' to="/cart">Cart</Link><span className={`${cart.length === 0 && 'zeroCartSize'} cartSize`}>{cart.length}</span></li>
+                        <li className="navLink"><Link className='lsd' to="/store">Save</Link></li>
+                        <li className="navLink"><Link className='lsd' to="/register/signup">Account</Link></li>
                     </ul>
                     <div className="logout">Log out</div>
                 </nav>

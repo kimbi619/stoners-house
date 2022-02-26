@@ -57,7 +57,7 @@
 }
 .menu {
   pointer-events: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 /* ====================================================================================== */
 /* =====================styling search filter content=========================================== */
@@ -122,6 +122,7 @@ nav .caption {
 .navLink {
   margin-top: 1.2rem;
 }
+
 .navList a {
   color: white;
   outline: none;

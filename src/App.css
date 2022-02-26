@@ -86,3 +86,6 @@ input[type='checkbox']:checked::after {
   top: 0;
   left: 0;
 }
+.appContentWrapper {
+  min-height: 85vh;
+}

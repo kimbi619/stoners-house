@@ -16,6 +16,7 @@ import { StoreContextProvider } from './Components/Store/StoreContext'
 import Checkout from './Components/Main/Checkout/Checkout';
 import Store from './Components/Store/Store';
 import { FilteredProductContextProvider } from './Components/Nav/FilteredProductContext';
+import Footer from './Components/Footer/Footer';
 
 
 
@@ -49,6 +50,7 @@ function App() {
         <StoreContextProvider>
           <FilteredProductContextProvider>
         <Nav products={products} />
+        <div className='appContentWrapper'>
         <Route path="/products" exact>
           <CategoryCarousel className='categoryMobile' products={products} />
           <CategoryDesktop filterProduct={handleFilter} products={products} className='categoryDesktop' />
@@ -63,6 +65,8 @@ function App() {
           <Route path="/store" component={Store}  />
           <Route path="/" exact><HomePage products={products} /></Route>
         </Switch>
+        </div>
+        <Footer />
         </FilteredProductContextProvider>
         </StoreContextProvider>
       </CartContextProvider>

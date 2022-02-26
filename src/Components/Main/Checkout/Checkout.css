@@ -9,7 +9,6 @@
   border: 5px solid #f0f0f07e;
   border-radius: 8px;
   padding-top: 1rem;
-  margin-block: 1rem;
 }
 
 .titleTextSmall {
@@ -29,8 +28,6 @@
 
 @media (min-width: 35rem) {
   .checkout {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
     max-width: 1300px;
   }
   .firstNameInput,

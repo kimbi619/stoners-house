@@ -44,7 +44,7 @@
   color: white;
   font-family: 'quicksand', sans-serif;
   width: 70%;
-  margin: 5rem auto;
+  margin: 3rem auto;
   font-size: var(--fs-sm);
 }
 .changeRegisterBtn {

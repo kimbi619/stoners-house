@@ -5,14 +5,23 @@ import { FaTimes } from 'react-icons/fa'
 import {BsCart4, BsFillSuitHeartFill} from 'react-icons/bs'
 import { CartContext } from '../CartContext';
 import { StoreContext } from '../../Store/StoreContext';
+import { FilteredProductContext } from '../../Nav/FilteredProductContext';
 
 
-const Products = ({ products }) => {
+const Products = ({ fetchedProducts }) => {
     
     const [cart, setCart] = useContext(CartContext)
     const [store, setStore] = useContext(StoreContext)
+    const [filteredProduct, setFilteredProduct] = useContext(FilteredProductContext)
     const [isLiked, setIsLiked] = useState(false)
     const popupRef  = useRef()
+    let products = [];
+
+    if(filteredProduct.length != 0){
+        products = filteredProduct
+    }else{
+        products = fetchedProducts
+    }
 
     const addToCart = (product, e)=>{
         setCart([...cart, {product:product}]);
@@ -27,7 +36,6 @@ const Products = ({ products }) => {
     const removePopup = (e)=>{
         e.target.parentElement.style.display="none";
     }
-   
     return (
         <>
         
@@ -39,8 +47,8 @@ const Products = ({ products }) => {
                 products.map((product, index)=>(
                     // <Product product={product} key={product.sys.id} />
                     <>
+                    <div className='productItem' key={index}>
                         {product.fields.isLiked = false}
-                    <div className='productItem' key={product.sys.id}>
                         <Link to={`/product/${product.sys.id}`}> 
                             <div className="productImgWrapper">
                                 {product.fields.productImage &&

@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Client } from './Client';
 import Main from './Components/Main/Main';
 import Nav from './Components/Nav/Nav';
@@ -15,6 +15,7 @@ import { CartContextProvider } from './Components/Main/CartContext';
 import { StoreContextProvider } from './Components/Store/StoreContext'
 import Checkout from './Components/Main/Checkout/Checkout';
 import Store from './Components/Store/Store';
+import { FilteredProductContextProvider } from './Components/Nav/FilteredProductContext';
 
 
 
@@ -34,20 +35,23 @@ function App() {
 
   }, []);
 
-  const handleFilter = (category)=>{
-    console.log(category.target);
+  const handleFilter = (cat)=>{
+    if(cat === 'back'){
+      console.log('go back to products')
+    }
+    console.log(cat)
   }
-
 
 
   return (
     <div className="App">
       <CartContextProvider>
         <StoreContextProvider>
+          <FilteredProductContextProvider>
         <Nav products={products} />
         <Route path="/products" exact>
-          <CategoryCarousel className='categoryMobile' onFilter={handleFilter} products={products} />
-          <CategoryDesktop className='categoryDesktop' />
+          <CategoryCarousel className='categoryMobile' products={products} />
+          <CategoryDesktop filterProduct={handleFilter} products={products} className='categoryDesktop' />
         </Route>
         <Main products={products} />
         
@@ -59,6 +63,7 @@ function App() {
           <Route path="/store" component={Store}  />
           <Route path="/" exact><HomePage products={products} /></Route>
         </Switch>
+        </FilteredProductContextProvider>
         </StoreContextProvider>
       </CartContextProvider>
     </div>

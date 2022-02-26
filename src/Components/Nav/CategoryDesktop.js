@@ -1,17 +1,57 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import { GiMedicines, GiCrossedPistols, GiChestnutLeaf, GiOverkill, GiAmmoBox, GiMachineGunMagazine } from 'react-icons/gi'
 import { BsFillArrowLeftCircleFill } from 'react-icons/bs'
-const CategoryDesktop = () => {
+import { FilteredProductContext } from './FilteredProductContext'
+
+
+const CategoryDesktop = ({ filterProduct, products }) => {
+  const [filteredProduct, setFilteredProduct] = useContext(FilteredProductContext)
+  const categories = [
+    {
+      name: "back",
+      icon: <BsFillArrowLeftCircleFill className='weaponIcon' />
+    },
+    {
+      name: "pills",
+      icon: <GiMedicines className='weaponIcon' />
+    },
+    {
+      name: "glocks",
+      icon: <GiCrossedPistols className='weaponIcon' />
+    },
+    {
+      name: "weed",
+      icon: <GiChestnutLeaf className='weaponIcon' />
+    },
+    {
+      name: "category",
+      icon: <GiOverkill className='weaponIcon' />
+    },
+    {
+      name: "sandals",
+      icon: <GiAmmoBox className='weaponIcon' />
+    },
+    {
+      name: "Ammo",
+      icon: <GiMachineGunMagazine className='weaponIcon' />
+    },
+]
+
+  const filterProducts = (cat) =>{
+    let filteredP = products.filter(product => product.fields.category === cat)
+    setFilteredProduct(filteredP)
+  }
+  console.log(filteredProduct)
   return (
     <div className='container'>
         <ul className='categoryList'>
-            <li className='categoryListItem'><BsFillArrowLeftCircleFill className='weaponIcon' /> Back</li>
-            <li className='categoryListItem'><GiMedicines className='weaponIcon' /> Pills</li>
-            <li className='categoryListItem'><GiCrossedPistols className='weaponIcon' /> Glock</li>
-            <li className='categoryListItem'><GiChestnutLeaf className='weaponIcon' /> Weed</li>
-            <li className='categoryListItem'><GiOverkill className='weaponIcon' /> Category</li>
-            <li className='categoryListItem'><GiAmmoBox className='weaponIcon' /> Sandals</li>
-            <li className='categoryListItem'><GiMachineGunMagazine className='weaponIcon' /> Ammo</li>
+            {
+              categories.map((category, index) =>(
+                <li key={index} onClick={e=>filterProducts(category.name)} className='categoryListItem'>
+                  {category.icon} {category.name}
+                </li>
+              ))
+            }
         </ul>
     </div>
   )

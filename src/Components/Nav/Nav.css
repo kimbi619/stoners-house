@@ -318,6 +318,7 @@ nav .caption {
   display: inline-flex;
   margin: 1rem;
   align-items: center;
+  text-transform: capitalize;
 }
 
 .categoryListItem .weaponIcon {

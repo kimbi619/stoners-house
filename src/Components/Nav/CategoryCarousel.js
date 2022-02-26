@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Item from './Item'
 import Carousel from 'react-elastic-carousel';
 import CarouselItem from './CarouselItem';
+import { FilteredProductContext } from './FilteredProductContext';
 
 
 const breakPoints = [
@@ -17,7 +18,8 @@ const breakPoints = [
     { width: 600, itemsToShow: 6 }
   ];
 
-const CategoryCarousel = ({products, onFilter}) => {
+const CategoryCarousel = ({ products }) => {
+    const [filteredProduct, setFilteredProduct] = useContext(FilteredProductContext)
     const categories = [
         {
             name: "pills",
@@ -40,6 +42,12 @@ const CategoryCarousel = ({products, onFilter}) => {
             img: "https://source.unsplash.com/random"
         },
     ]
+    
+    const filterProducts = (cat) =>{
+        let filteredP = products.filter(product => product.fields.category === cat)
+        setFilteredProduct(filteredP)
+    }
+
     return (
         <div className="caWrap">
             <Carousel 
@@ -58,7 +66,7 @@ const CategoryCarousel = ({products, onFilter}) => {
             {
                 categories.map((cat, index) => (
                     <Item key = {index}>
-                        <CarouselItem onFilter={onFilter} name={cat.name} img={cat.img} />
+                        <CarouselItem onFilter={e=>filterProducts(cat.name)} name={cat.name} img={cat.img} />
                     </Item>
                 ))
             }

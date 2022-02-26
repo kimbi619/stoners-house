@@ -14,7 +14,7 @@ const Main = ({ products })=> {
                 <Switch>
                     <Route path="/product/:id" component={OpenProduct}/>
                     <Route path="/products">
-                        <Products products={products}  />
+                        <Products fetchedProducts={products}  />
                     </Route>
                     <Route path="/cart" component={Cart} />
                 </Switch>

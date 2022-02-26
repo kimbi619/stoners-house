@@ -10,13 +10,12 @@
 .registerHeaderWrapper {
   color: white;
   background: linear-gradient(to right, #1e28348a, #1e28348a),
-    url("https://source.unsplash.com/random");
+    url('https://source.unsplash.com/random');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: 100%;
-  max-width: 27rem;
-  margin: auto;
+  max-width: 35rem;
+  margin: 0rem auto 0rem;
   position: relative;
 }
 .backBtn {
@@ -39,19 +38,20 @@
 .signupHeader {
   text-align: center;
   padding: 2rem;
+  padding-top: 5rem;
 }
 .signupHeader p {
   color: white;
-  font-family: "quicksand", sans-serif;
+  font-family: 'quicksand', sans-serif;
   width: 70%;
-  margin: 1rem auto;
-  font-size: var(--fs-xs);
+  margin: 5rem auto;
+  font-size: var(--fs-sm);
 }
 .changeRegisterBtn {
   display: flex;
   justify-content: space-between;
-  font-family: "quicksand", sans-serif;
-  margin: auto;
+  font-family: 'quicksand', sans-serif;
+  margin: 1rem auto 0rem;
 }
 .changeRegisterBtn a {
   color: white;
@@ -92,7 +92,7 @@
   color: var(--secondaryColor);
   height: 100%;
   background: #f0f5fe;
-  font-family: "quicksand", sans-serif;
+  font-family: 'quicksand', sans-serif;
   font-size: 1rem;
   border-radius: 7px;
 }
@@ -137,8 +137,8 @@
 .submit {
   background: #0672ff;
   color: white;
-  font-family: "quicksand", sans-serif;
-  height: 2.2rem;
+  font-family: 'quicksand', sans-serif;
+  height: 2.8rem;
   font-size: 1rem;
   cursor: pointer;
   outline: none;
@@ -176,7 +176,7 @@
 .registerTitleDesktop {
   display: none;
   text-align: center;
-  font-family: "poppins", sans-serif;
+  font-family: 'poppins', sans-serif;
   font-weight: 300;
   color: var(--primaryColor);
 }
@@ -185,7 +185,7 @@
   font-size: 0.9rem;
   margin-bottom: 1rem;
   text-align: center;
-  font-family: "quicksand", sans-serif;
+  font-family: 'quicksand', sans-serif;
   display: none;
 }
 .logLogin {

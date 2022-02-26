@@ -19,7 +19,8 @@ const Products = ({ products }) => {
         popupRef.current.style.display="block";
     }
     function addToStore(newProduct){
-        setStore([...store, {product:newProduct}]);
+        // setStore(storeItems => (storeItems.product.sys.id === newProduct.sys.id && [...storeItems, {product:newProduct}]));
+        setStore([...store, {product: newProduct}]);
     }
 
     // remove the popup alert from display

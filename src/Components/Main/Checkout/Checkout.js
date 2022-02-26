@@ -25,7 +25,7 @@ const Checkout = () => {
                         </section>
 
                         <section className="userCridentials">
-                            <h1 className="titleTextSmall">Location &copy; shipping address</h1>
+                            <h1 className="titleTextSmall">Location &amp; shipping address</h1>
                             <div className="splitInputField">
                                 <input className='checkoutInputs firstNameInput' type="text" name='fName' placeholder='house address' /> 
                                 <input className='checkoutInputs lastNameInput' type="text" name='lname' placeholder='street' /> 
@@ -36,7 +36,26 @@ const Checkout = () => {
                     </form>
                 </div>
                 <div className="buyerContent">
-                
+                    {
+                        cart.map((item, index)=>(
+                            <div key={index} className="checkoutItemWrapper">
+                                {console.log(item.product)}
+                                <div className="checkoutImageWrapper">
+                                    <div className="checkoutImg">
+                                        <img src={item.product.fields.productImage[0].fields.file.url} alt={item.product.fields.name} />
+                                    </div>
+                                    <h2 className="titleText"><Link to={`/product/${item.product.sys.id}`}>{item.product.fields.name}</Link></h2>
+                                </div>
+                                <div className="checkoutCategory">
+                                    {item.product.fields.category}
+                                </div>
+                                <div className="checkoutPrice">
+                                    {item.product.fields.price}
+                                </div>
+
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
     </div>

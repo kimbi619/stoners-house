@@ -2,9 +2,13 @@
   color: #42435d;
   font-family: 'Work Sans', sans-serif;
 }
-
+.contactMapGrid {
+  display: grid;
+  grid-gap: 0rem;
+}
 .getInTouch {
-  width: 45%;
+  width: 90%;
+  margin: auto;
   max-width: 450px;
 }
 .getInTouch h1 {
@@ -30,6 +34,7 @@
   background-color: rgb(247, 91, 130);
   font-family: 'montserrat';
   font-weight: 700;
+  margin: 1.5rem 0rem;
 }
 .addresses {
   display: grid;
@@ -43,8 +48,16 @@
   text-align: center;
   margin: 2rem;
 }
+
+.maps {
+  margin-top: 3rem;
+}
 @media (min-width: 35rem) {
   .addresses {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .contactMapGrid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
   }
 }

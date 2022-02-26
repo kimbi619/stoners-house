@@ -3,7 +3,6 @@
   display: grid;
   color: #42435d;
   font-family: 'Work Sans', sans-serif;
-  max-width: 500px;
 }
 
 .checkout section {
@@ -29,16 +28,54 @@
 }
 
 @media (min-width: 35rem) {
+  .checkout {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    max-width: 1300px;
+  }
   .firstNameInput,
   .lastNameInput {
     width: 49%;
     margin-inline: 0;
   }
+
   .splitInputField {
     display: flex;
     justify-content: space-between;
     margin-inline: 0.7rem;
   }
+}
+
+.checkoutItemWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #42435d79;
+  margin: 1rem 0rem;
+  margin-right: 1rem;
+  padding-right: 1rem;
+}
+.checkoutImageWrapper {
+  display: flex;
+  align-items: flex-start;
+}
+.checkoutImg {
+  width: 100px;
+  height: 75px;
+  padding: 0.5rem;
+}
+
+.checkoutImageWrapper h2 {
+  text-transform: capitalize;
+}
+.checkoutImageWrapper h2:hover {
+  text-decoration: underline;
+}
+
+.checkoutImg img {
+  width: 100%;
+  height: 100%;
 }
 
 /* ======================================================================== */

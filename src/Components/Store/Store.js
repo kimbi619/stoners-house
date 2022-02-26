@@ -11,7 +11,6 @@ import Empty from './Empty';
 const Store = () => {
   const [store, setStore] = useContext(StoreContext);
   const [cart, setCart] = useContext(CartContext);
-    console.log(store)
 
   const AddToCart = (product, e)=> {
     setCart([...cart, {product:product}]);
@@ -28,7 +27,7 @@ const Store = () => {
       {
         store.length < 1 ? (
           <>
-            <h1 className='storeIsEmpty'>Store is empty</h1>
+            <h1 className='storeIsEmpty'>You haven't saved any items</h1>
             <p className="return"><Link to='/products'>return to products</Link></p>
             <Empty />
           </>

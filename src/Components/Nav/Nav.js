@@ -66,7 +66,7 @@ const Nav = ({ products }) => {
             <div className="nav">
                 <div className="container">
                     <div className="mobile navHeader">
-                        <Link to="/" exact ><div className="logo">
+                        <Link to="/" ><div className="logo">
                             <h2>Logo</ h2>
                         </div></Link>
 
@@ -97,11 +97,11 @@ const Nav = ({ products }) => {
                 </div>
                 <nav onClick={removeNav}>
                     <div className="logoCaption">
-                        <Link to= "/" exact><div className="logo">logo</div></Link>
+                        <Link to= "/"><div className="logo">logo</div></Link>
                         <div className="caption">Fill with Caption</div>
                     </div>
                     <ul className="navList">
-                        <Link to="/products" exact><li className="navLink">Products</li></Link>
+                        <Link to="/products" ><li className="navLink">Products</li></Link>
                         <Link to="/contact-us"><li className="navLink">Contact us</li></Link>
                         <Link to="/about"><li className="navLink">About</li></Link>
                         <Link to="/cart"><li className="navLink cart">Cart<span className={`${cart.length === 0 && 'zeroCartSize'} cartSize`}>{cart.length}</span></li></Link>

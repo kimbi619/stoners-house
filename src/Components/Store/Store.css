@@ -63,3 +63,13 @@
   opacity: 0.4;
   margin: 0rem 0rem;
 }
+
+.emptySaveBird {
+  width: 80%;
+  margin: auto;
+  max-width: 500px;
+}
+.emptySaveBird .bird {
+  display: block;
+  width: 100%;
+}

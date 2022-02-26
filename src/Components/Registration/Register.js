@@ -60,6 +60,7 @@ const Register = () => {
                     <Link to="/register/login"><div className="registerBtn">LOGIN</div></Link>
                 </div>
             </div>
+            <br/><br/>
             <div className="formControl">
                 <Switch>
                     <Route path="/register/resetpassword" component={Signup} />

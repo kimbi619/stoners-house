@@ -216,7 +216,8 @@ nav .caption {
 .nav .container {
   margin: 0;
 }
-.categoryDesktop {
+.categoryDesktop,
+.categoryList {
   display: none;
 }
 .cart {
@@ -278,7 +279,8 @@ nav .caption {
     display: none;
   }
 
-  .categoryDesktop {
+  .categoryDesktop,
+  .categoryList {
     display: block;
   }
 }

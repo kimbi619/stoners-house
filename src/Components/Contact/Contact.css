@@ -52,6 +52,10 @@
 .maps {
   margin-top: 3rem;
 }
+.socialLinks {
+  display: flex;
+  justify-content: center;
+}
 @media (min-width: 35rem) {
   .addresses {
     grid-template-columns: repeat(2, 1fr);

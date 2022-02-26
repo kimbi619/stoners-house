@@ -2,6 +2,7 @@ import React from 'react'
 
 import Map from './Map'
 import './Contact.css'
+import Socials from '../../Socials'
 
 const Contact = () => {
     const handleFormAction = () => {
@@ -45,6 +46,9 @@ const Contact = () => {
                 </div>
             </div>
             <div className="rapidContactText">Please you can alway contact us at <a href="mailto:stonershouseofficial@gmail.com"> stonershouseofficial@gmail.com</a></div>
+            <div className="socialLinks">
+                <Socials />
+            </div>
         </div>
     </div>
   )

@@ -5,11 +5,8 @@
   align-items: flex-end;
   padding-bottom: 0.7rem;
   border-bottom: 4px solid rgba(66, 99, 131, 0.199);
-  /* border-bottom: 6px solid var(--light-shadow); */
   max-width: 700px;
   margin: 1rem auto;
-  color: #42435d;
-  font-family: 'Work Sans', sans-serif;
   color: #42435d;
   font-family: 'Work Sans', sans-serif;
 }

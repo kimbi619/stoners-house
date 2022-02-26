@@ -64,8 +64,8 @@ const Cart = () => {
                                 <input className='checkoutInputs firstNameInput' type="text" name='fName' placeholder='house address' /> 
                                 <input className='checkoutInputs lastNameInput' type="text" name='lname' placeholder='street' /> 
                             </div>
-                            <input className='checkoutInputs' type="email" name='email' placeholder='State / Town / Province' /> 
-                            <input className='checkoutInputs' type="email" name='email' placeholder='ZIP code ' /> 
+                            <input className='checkoutInputs' type="text" name='town' placeholder='State / Town / Province' /> 
+                            <input className='checkoutInputs' type="text" name='zip' placeholder='ZIP code ' /> 
                         </section>
                     </form>
                 </div>

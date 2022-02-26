@@ -20,7 +20,7 @@ const breakPoints = [
           return <div className="preloader"></div>
         }
         
-        const {name, description, price, productRatings} = product;
+        const {name, description, price, rating} = product;
         let medias = [];
         if(product.productImage){
             product.productImage.forEach(elt => {
@@ -29,68 +29,63 @@ const breakPoints = [
         }
           const stars = Array(5).fill(0);
               const colors={
-                  blue: "blue",
-                  gray: "#a9a9a9"
+                blue: "#EFAD15",
+                gray: "#a9a9a9"
               }
           
     
 
     return (
-        <div>
+        <div className='openedProduct'>
             <div className="productFlexWrapper">
-            <div className="flexItem">
-            <div className="imgWrapper">
-                    <Carousel 
-                        enableAutoPlay autoPlaySpeed={2500} 
-                        breakPoints={breakPoints} 
-                        alternate
-                        renderPagination={({ pages, activePage, onClick }) => {
-                            return (
-                                <>
-                                </>
-                            )
-                        }}
-                        className="carouselWrapper"
-                        >
-                        {
-                            medias.map(media=>(
-                                <OpenProductItem>
-                                <div className="productPageImgWrapper">
-                                    <img src={media} alt={name} />
-                                </div>
-                                </OpenProductItem>
-                            ))
-                        }
-                    </Carousel>
+                <div className="flexItem">
+                    <div className="imgWrapper">
+                        <Carousel 
+                            enableAutoPlay autoPlaySpeed={2500} 
+                            breakPoints={breakPoints} 
+                            alternate
+                            renderPagination={({ pages, activePage, onClick }) => {
+                                return (
+                                    <>
+                                    </>
+                                )
+                            }}
+                            className="carouselWrapper"
+                            >
+                            {
+                                medias.map(media=>(
+                                    <OpenProductItem>
+                                    <div className="productPageImgWrapper">
+                                        <img src={media} alt={name} />
+                                    </div>
+                                    </OpenProductItem>
+                                ))
+                            }
+                        </Carousel>
+                    </div>
+
                 </div>
-                        
-                <div className="productDesc">
+                <div className="flexItem flexItemTwo">
                     <div className="price-rate">
-                        <div className="name">{name}</div>
-                        <p className="price">${price}</p> 
+                        <h2 className="name">{name}</h2>
                         <div className="rating">
                             {stars.map((_, index)=>(
-                                <IoStarSharp 
+                                <IoStarSharp className="star"
                                     key = {index} 
-                                    color={(productRatings) > index ? colors.blue: colors.gray}
+                                    color={(rating) > index ? colors.blue: colors.gray}
                                 />
                             ))}
-
+                            <span> - {price} reviews</span>
                         </div>
                     </div>
-                    
-                </div>
-           
-                    <div className="itemDescription">
+                    <div className="openedItemDescription">
                         <h4 className="title">Description</h4>
                         <p>{description} </p>
                     </div>
-
-                </div>
-                <div className="flexItem">
-                    <h2 className="desktopTitle">{name}</h2>
-                    <button className="buyBtn addToCart">Add to cart</button>
-                    <button className="buyBtn productPlaceOrder">Place order</button>
+                    <div className="inlineButton">
+                        <button className="buyBtn openedButton productPlaceOrder">Place order</button>
+                        <button className="buyBtn openedButton addToCart">Add to cart</button>
+                    </div>
                 </div>
             </div>
             

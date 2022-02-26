@@ -12,7 +12,9 @@ import app from './fire'
 import CategoryDesktop from './Components/Nav/CategoryDesktop';
 import Contact from './Components/Contact/Contact';
 import { CartContextProvider } from './Components/Main/CartContext';
+import { StoreContextProvider } from './Components/Store/StoreContext'
 import Checkout from './Components/Main/Checkout/Checkout';
+import Store from './Components/Store/Store';
 
 
 
@@ -22,6 +24,7 @@ function App() {
 
   
   const [products, setProducts] = useLocalStorage('products', [])
+
   useEffect(() => {  
     Client.getEntries()
     .then(res=>{
@@ -40,6 +43,7 @@ function App() {
   return (
     <div className="App">
       <CartContextProvider>
+        <StoreContextProvider>
         <Nav products={products} />
         <Route path="/products" exact>
           <CategoryCarousel className='categoryMobile' onFilter={handleFilter} products={products} />
@@ -52,8 +56,10 @@ function App() {
           <Route path="/register/login" component={Register}  />
           <Route path="/contact-us" component={Contact}  />
           <Route path="/checkout" component={Checkout}  />
+          <Route path="/store" component={Store}  />
           <Route path="/" exact><HomePage products={products} /></Route>
         </Switch>
+        </StoreContextProvider>
       </CartContextProvider>
     </div>
   );

@@ -1,9 +1,13 @@
-import React,{useState} from 'react'
+import React,{useState, useContext} from 'react'
 import './Cart.css'
 import { IoStarSharp } from 'react-icons/io5'
+import { StoreContext } from '../../Store/StoreContext'
+import { CartContext } from '../CartContext'
 
 const CartItem = ({ product, onRemove, onCartChange }) => {
     const [itemCount, setItemCount] = useState(1)
+    const [store, setStore] = useContext(StoreContext);
+    const [cart, setCart] = useContext(CartContext);
     let medias = [];
     const stars = Array(5).fill(0);
     const colors={
@@ -22,6 +26,14 @@ const CartItem = ({ product, onRemove, onCartChange }) => {
     const id = product.sys.id;
     const removeItem = (e)=>{
         onRemove(id)
+    }
+
+    const addToStore = (product, e) => {
+        console.log(product)
+        setStore([...store, {product:product}])
+        let filteredCart = cart.filter(item => (item.product.sys.id != product.sys.id))
+        setCart(filteredCart)
+        console.log(filteredCart)
     }
     
     if(itemCount <= 0){
@@ -52,7 +64,7 @@ const CartItem = ({ product, onRemove, onCartChange }) => {
                     <div className="cartPrice">${price}</div>
                     <div className="cartBtnControl">
                         <span onClick={removeItem} className="cartBtn">remove</span>
-                        <span className="cartBtn cartSaveToLater remove">save</span>
+                        <span onClick={e=>addToStore(product, e)} className="cartBtn cartSaveToLater remove">save</span>
                     </div>
                 </div>
             </div>

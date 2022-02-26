@@ -105,7 +105,7 @@ const Nav = ({ products }) => {
                         <Link to="/contact-us"><li className="navLink">Contact us</li></Link>
                         <Link to="/about"><li className="navLink">About</li></Link>
                         <Link to="/cart"><li className="navLink cart">Cart<span className={`${cart.length === 0 && 'zeroCartSize'} cartSize`}>{cart.length}</span></li></Link>
-                        <Link to=""><li className="navLink">Save</li></Link>
+                        <Link to="/store"><li className="navLink">Save</li></Link>
                         <Link to="/register/signup"><li className="navLink">Account</li></Link>
                     </ul>
                     <div className="logout">Log out</div>

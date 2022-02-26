@@ -1,0 +1,51 @@
+.checkout,
+.checkoutTitle {
+  display: grid;
+  color: #42435d;
+  font-family: 'Work Sans', sans-serif;
+  max-width: 500px;
+}
+
+.checkout section {
+  border: 5px solid #f0f0f07e;
+  border-radius: 8px;
+  padding-top: 1rem;
+  margin-block: 1rem;
+}
+
+.titleTextSmall {
+  margin: 0.7rem;
+  font-size: 1.4rem;
+}
+
+.checkoutInputs {
+  display: block;
+  border: 1px solid #42435d;
+  padding: 0.7rem;
+  outline: none;
+  margin: 1rem 0.7rem;
+  width: calc(100% - 1.4rem);
+  text-transform: capitalize;
+}
+
+@media (min-width: 35rem) {
+  .firstNameInput,
+  .lastNameInput {
+    width: 49%;
+    margin-inline: 0;
+  }
+  .splitInputField {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 0.7rem;
+  }
+}
+
+/* ======================================================================== */
+/* ======================================================================== */
+/* ======================================================================== */
+/* ======================================================================== */
+/* ======================================================================== */
+/* ======================================================================== */
+/* ======================================================================== */
+/* ======================================================================== */

@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/stoners-house/static/css/main.92f89456.chunk.css",
-    "main.js": "/stoners-house/static/js/main.66203d81.chunk.js",
-    "main.js.map": "/stoners-house/static/js/main.66203d81.chunk.js.map",
-    "runtime-main.js": "/stoners-house/static/js/runtime-main.9d5589ee.js",
-    "runtime-main.js.map": "/stoners-house/static/js/runtime-main.9d5589ee.js.map",
+    "main.css": "/stoners-house/static/css/main.e53d9552.chunk.css",
+    "main.js": "/stoners-house/static/js/main.f16fe666.chunk.js",
+    "main.js.map": "/stoners-house/static/js/main.f16fe666.chunk.js.map",
+    "runtime-main.js": "/stoners-house/static/js/runtime-main.83635846.js",
+    "runtime-main.js.map": "/stoners-house/static/js/runtime-main.83635846.js.map",
     "static/css/2.0899a811.chunk.css": "/stoners-house/static/css/2.0899a811.chunk.css",
-    "static/js/2.18be5b79.chunk.js": "/stoners-house/static/js/2.18be5b79.chunk.js",
-    "static/js/2.18be5b79.chunk.js.map": "/stoners-house/static/js/2.18be5b79.chunk.js.map",
-    "static/js/3.4b4aa8fe.chunk.js": "/stoners-house/static/js/3.4b4aa8fe.chunk.js",
-    "static/js/3.4b4aa8fe.chunk.js.map": "/stoners-house/static/js/3.4b4aa8fe.chunk.js.map",
+    "static/js/2.9207d917.chunk.js": "/stoners-house/static/js/2.9207d917.chunk.js",
+    "static/js/2.9207d917.chunk.js.map": "/stoners-house/static/js/2.9207d917.chunk.js.map",
+    "static/js/3.8cbb8458.chunk.js": "/stoners-house/static/js/3.8cbb8458.chunk.js",
+    "static/js/3.8cbb8458.chunk.js.map": "/stoners-house/static/js/3.8cbb8458.chunk.js.map",
     "index.html": "/stoners-house/index.html",
     "static/css/2.0899a811.chunk.css.map": "/stoners-house/static/css/2.0899a811.chunk.css.map",
-    "static/css/main.92f89456.chunk.css.map": "/stoners-house/static/css/main.92f89456.chunk.css.map",
-    "static/js/2.18be5b79.chunk.js.LICENSE.txt": "/stoners-house/static/js/2.18be5b79.chunk.js.LICENSE.txt",
+    "static/css/main.e53d9552.chunk.css.map": "/stoners-house/static/css/main.e53d9552.chunk.css.map",
+    "static/js/2.9207d917.chunk.js.LICENSE.txt": "/stoners-house/static/js/2.9207d917.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/stoners-house/static/media/outline-icons.ddae9b1b.woff",
     "static/media/googleLogo.221f782d.png": "/stoners-house/static/media/googleLogo.221f782d.png",
     "static/media/App.css": "/stoners-house/static/media/loader.e55a1721.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.9d5589ee.js",
+    "static/js/runtime-main.83635846.js",
     "static/css/2.0899a811.chunk.css",
-    "static/js/2.18be5b79.chunk.js",
-    "static/css/main.92f89456.chunk.css",
-    "static/js/main.66203d81.chunk.js"
+    "static/js/2.9207d917.chunk.js",
+    "static/css/main.e53d9552.chunk.css",
+    "static/js/main.f16fe666.chunk.js"
   ]
 }

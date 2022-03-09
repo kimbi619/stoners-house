@@ -1,0 +1,180 @@
+.homeTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: 'work sans', 'open Sans', times;
+  text-transform: capitalize;
+  color: #094a75;
+  margin: 1rem;
+}
+.homeText {
+  font-size: 1.2rem;
+  font-family: 'work sans';
+}
+.homeText:nth-child(2) {
+  margin: 0;
+}
+.centerText {
+  text-align: center;
+}
+.heroSection {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  font-family: 'Work Sans', sans-serif;
+  background: linear-gradient(to right, #31027c9c, #35028891),
+    url('https://source.unsplash.com/random');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.heroSectionContent {
+  width: 90%;
+  margin: auto;
+  max-width: 1200px;
+  color: white;
+}
+.welcomeText {
+  color: white;
+  font-size: 1.4rem;
+  width: 80%;
+  max-width: 550px;
+}
+.welcomeTitle {
+  font-size: 2.5rem;
+}
+.welcomeBtn {
+  border: none;
+  outline: none;
+  padding: 1.2rem 2rem;
+  font-size: 1.4rem;
+  color: white;
+  font-family: work sans, serif;
+  background-color: #5f005f;
+  border-radius: 100px;
+  margin-top: 1rem;
+}
+
+.whatWeDo,
+.whyChooseUs,
+.whyTrustUs {
+  text-align: center;
+  width: 90%;
+  margin: 2rem auto;
+  max-width: 650px;
+}
+
+.homepage .reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  grid-gap: 1.2rem;
+  margin: 2rem auto 5rem;
+}
+.homepage .review {
+  box-shadow: 0px 0px 10px 0px #1e28345d;
+  border-radius: 6px;
+  display: flex;
+  position: relative;
+}
+.reviewImageWrapper {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: lightgray;
+  overflow: hidden;
+  position: relative;
+}
+.reviewImageWrapper img {
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.reviewImageSection,
+.reviewTextSection {
+  margin: 1rem;
+}
+.reviewerName {
+  text-transform: capitalize;
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+}
+.reviewText {
+  font-family: 'work sans';
+}
+.reviewDate {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0.5rem 0.7rem;
+  font-size: 0.65rem;
+  opacity: 0.7;
+}
+
+.ourFeaturesGrid {
+  width: 90%;
+  max-width: 700px;
+  margin: 1rem auto 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.featuresSgWrapper {
+  width: 5rem;
+  height: 5rem;
+  background-color: lightgray;
+}
+.featuresSgWrapper svg {
+  width: 100%;
+}
+.featureText {
+  margin: 1rem 0rem;
+  color: #094a75;
+  font-family: 'work sans', 'open sans', sans-serif;
+  text-transform: uppercase;
+}
+
+.disclaimer {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  align-items: flex-start;
+  margin: auto;
+}
+.disclaimer .homeTitle {
+  font-size: 1.5rem;
+  color: crimson;
+  font-weight: 500;
+  margin: 0 1rem 0rem 0rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+.disclaimer .homeText {
+  font-size: 0.9rem;
+  color: crimson;
+  margin: 0rem 0rem;
+}
+.disclaimer .homeText:nth-child(2) {
+  margin-left: 12px;
+}
+
+.homePage_finalLink {
+  text-align: center;
+  margin: 2rem auto 4rem;
+}
+
+.homepage_getProduct {
+  text-align: center;
+  margin: 3rem;
+  outline: none;
+  padding: 0.5rem 2rem;
+  color: white;
+  font-family: work sans, serif;
+  background-color: #5f005f;
+  border-radius: 100px;
+  margin-top: 1rem;
+}

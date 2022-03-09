@@ -7,7 +7,7 @@ import Register from './Components/Registration/Register';
 import { Route, Switch } from 'react-router';
 import CategoryCarousel from './Components/Nav/CategoryCarousel';
 import useLocalStorage from './UseLocalStorage';
-import HomePage from './Components/HomePage';
+import HomePage from './Components/HomePage/HomePage';
 import app from './fire'
 import CategoryDesktop from './Components/Nav/CategoryDesktop';
 import Contact from './Components/Contact/Contact';
@@ -17,6 +17,7 @@ import Checkout from './Components/Main/Checkout/Checkout';
 import Store from './Components/Store/Store';
 import { FilteredProductContextProvider } from './Components/Nav/FilteredProductContext';
 import Footer from './Components/Footer/Footer';
+import About from './Components/About/About';
 
 
 
@@ -61,6 +62,7 @@ function App() {
           <Route path="/register/signup" component={Register}  />
           <Route path="/register/login" component={Register}  />
           <Route path="/contact-us" component={Contact}  />
+          <Route path="/about" component={About}  />
           <Route path="/checkout" component={Checkout}  />
           <Route path="/store" component={Store}  />
           <Route path="/" exact><HomePage products={products} /></Route>

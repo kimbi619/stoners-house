@@ -30,7 +30,11 @@ const CategoryCarousel = ({ products }) => {
             img: "https://source.unsplash.com/41SKIzYcFh0"
         },
         {
-            name: "weed",
+            name: "flowers",
+            img: "https://source.unsplash.com/qcCPIhhdgTw"
+        },
+        {
+            name: "pre-rolls",
             img: "https://source.unsplash.com/qcCPIhhdgTw"
         },
         {

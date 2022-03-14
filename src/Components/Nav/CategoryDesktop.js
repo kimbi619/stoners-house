@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { GiMedicines, GiCrossedPistols, GiChestnutLeaf, GiOverkill, GiAmmoBox, GiMachineGunMagazine } from 'react-icons/gi'
+import { GiMedicines, GiLighter, GiCigar, GiWrappedSweet, GiCrossedPistols, GiChestnutLeaf, GiOverkill, GiAmmoBox, GiMachineGunMagazine } from 'react-icons/gi'
 import { BsFillArrowLeftCircleFill } from 'react-icons/bs'
 import { FilteredProductContext } from './FilteredProductContext'
 
@@ -20,15 +20,27 @@ const CategoryDesktop = ({ filterProduct, products }) => {
       icon: <GiCrossedPistols className='weaponIcon' />
     },
     {
-      name: "weed",
+      name: "flowers",
       icon: <GiChestnutLeaf className='weaponIcon' />
     },
     {
-      name: "category",
+      name: "pre-rolls",
+      icon: <GiCigar className='weaponIcon' />
+    },
+    {
+      name: "shot guns",
       icon: <GiOverkill className='weaponIcon' />
     },
     {
-      name: "sandals",
+      name: "Edibles",
+      icon: <GiWrappedSweet className='weaponIcon' />
+    },
+    {
+      name: "Accessories",
+      icon: <GiLighter className='weaponIcon' />
+    },
+    {
+      name: "Guns",
       icon: <GiAmmoBox className='weaponIcon' />
     },
     {

@@ -74,7 +74,7 @@ const Cart = () => {
                     <h1 className="totalPrice">${totalPrice.toFixed(2)}</h1>
                 </div>
 
-                <button className={`buyBtn productPlaceOrder checkout ${cart.length < 1?"payDisable": ""}`}>Checkout</button>
+                <Link to={cart.length < 1?"/cart": "/checkout/payment"} className={`buyBtn productPlaceOrder checkout ${cart.length < 1?"payDisable": ""}`}>Checkout</Link>
             </div>
         </div>
     )

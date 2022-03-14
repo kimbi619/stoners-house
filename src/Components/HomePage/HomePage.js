@@ -56,18 +56,18 @@ const HomePage = ({ products }) => {
                     <Link to='/products'><button className='welcomeBtn'>Get involved</button></Link>
                 </div>
             </div>
-            <div className="whatWeDo container">
+            <section className="whatWeDo container">
                 <div className="homeTitle">What We Do</div>
                 <p className="homeText">We are a goverment certified weapons firm that purchase and sells home level military equipments for defence. We are a holding company which is built around several weopons and devices used by the united states citizens</p>
-            </div>
-            <div className="whyChooseUs container">
+            </section>
+            <section className="whyChooseUs container">
                 <div className="homeTitle">why choose us</div>
                 <p className="homeText">Our team of professionnals and business specialists, the perfect recipe for success and collaboration.</p>
                 <p className="homeText">We also promote human rights and equality</p>
-            </div>
+            </section>
 
 
-            <div className="ourCustomerSatisfaction container">
+            <section className="ourCustomerSatisfaction container">
                 <div className="homeTitle centerText">Our customer satisfaction</div>
                 <div className="reviews">
                     {
@@ -76,8 +76,8 @@ const HomePage = ({ products }) => {
                         ))
                     }
                 </div>
-            </div>
-            <div className="whyTrustUs">
+            </section>
+            <section className="whyTrustUs">
                 <div className="homeTitle">Our amazing features</div>
                 <div className="ourFeaturesGrid">
                     <div className="feature">
@@ -106,15 +106,15 @@ const HomePage = ({ products }) => {
                     </div>
 
                 </div>
-            </div>
+            </section>
 
-            <div className="whyTrustUs">
+            <section className="whyTrustUs">
                 <div className="homeTitle">Why trust us</div>
                 <p className="homeText">We are certified to sell weapons commercially in the united states of America</p>
                 <p className="homeText">We have been commissioned to sell to the following towns</p>
-            </div>
+            </section>
 
-            <div className="disclaimer">
+            <section className="disclaimer">
                 <div className="homeTitle">Disclaimer</div>
                 <div>
                     <p className="homeText">
@@ -124,10 +124,10 @@ const HomePage = ({ products }) => {
                     <p className="homeText">We will not support any killings with these items and will directly deny the any actions performs against it which are not for self defense**</p>
 
                 </div>
-            </div>
-            <div className="homePage_finalLink">
+            </section>
+            <section className="homePage_finalLink">
                 <Link className='homepage_getProduct' to='/products'>get products</Link>
-            </div>
+            </section>
         </div>
     )
 }

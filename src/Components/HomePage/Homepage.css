@@ -10,6 +10,9 @@
   font-size: 1.2rem;
   font-family: 'work sans';
 }
+.homepage section {
+  margin: 5rem auto;
+}
 .homeText:nth-child(2) {
   margin: 0;
 }

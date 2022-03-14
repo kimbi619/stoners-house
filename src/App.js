@@ -18,6 +18,8 @@ import Store from './Components/Store/Store';
 import { FilteredProductContextProvider } from './Components/Nav/FilteredProductContext';
 import Footer from './Components/Footer/Footer';
 import About from './Components/About/About';
+import Payments from './Components/Main/Payments/Payments'
+import { AuthContextProvider } from './AppContext/AuthContext';
 
 
 
@@ -47,31 +49,33 @@ function App() {
 
   return (
     <div className="App">
-      <CartContextProvider>
-        <StoreContextProvider>
-          <FilteredProductContextProvider>
-        <Nav products={products} />
-        <div className='appContentWrapper'>
-        <Route path="/products" exact>
-          <CategoryCarousel className='categoryMobile' products={products} />
-          <CategoryDesktop filterProduct={handleFilter} products={products} className='categoryDesktop' />
-        </Route>
-        <Main products={products} />
-        
-        <Switch>
-          <Route path="/register/signup" component={Register}  />
-          <Route path="/register/login" component={Register}  />
-          <Route path="/contact-us" component={Contact}  />
-          <Route path="/about" component={About}  />
-          <Route path="/checkout" component={Checkout}  />
-          <Route path="/store" component={Store}  />
-          <Route path="/" exact><HomePage products={products} /></Route>
-        </Switch>
-        </div>
-        <Footer />
-        </FilteredProductContextProvider>
-        </StoreContextProvider>
-      </CartContextProvider>
+      {/* <AuthContextProvider> */}
+        <CartContextProvider>
+          <StoreContextProvider>
+            <FilteredProductContextProvider>
+          <Nav products={products} />
+          <div className='appContentWrapper'>
+          <Route path="/products" exact>
+            <CategoryCarousel className='categoryMobile' products={products} />
+            <CategoryDesktop filterProduct={handleFilter} products={products} className='categoryDesktop' />
+          </Route>
+          <Main products={products} />
+          
+          <Switch>
+            <Route path="/register/signup" component={Register}  />
+            <Route path="/register/login" component={Register}  />
+            <Route path="/contact-us" component={Contact}  />
+            <Route path="/about" component={About}  />
+            <Route path="/checkout/payment" component={Payments}  />
+            <Route path="/store" component={Store}  />
+            <Route path="/" exact><HomePage products={products} /></Route>
+          </Switch>
+          </div>
+          <Footer />
+          </FilteredProductContextProvider>
+          </StoreContextProvider>
+        </CartContextProvider>
+      {/* </AuthContextProvider> */}
     </div>
   );
 }

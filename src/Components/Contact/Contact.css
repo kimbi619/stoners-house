@@ -65,3 +65,12 @@
     max-width: 1200px;
   }
 }
+
+.maps {
+  padding-top: 2rem;
+}
+.theMap {
+  background: blue;
+  width: 100%;
+  height: 100%;
+}

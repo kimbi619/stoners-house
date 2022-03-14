@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Map from './Map'
+import FMap from './FMap'
 import './Contact.css'
 import Socials from '../../Socials'
 
@@ -25,8 +25,7 @@ const Contact = () => {
                     </form>
                 </div>
                 <div className="maps">
-                    <span className="desc">Find us on maps</span>
-                    {/* <Map /> */}
+                    {/* <FMap /> */}
                 </div>
             </div>
             <h1 className="titleText">Our central offices</h1>

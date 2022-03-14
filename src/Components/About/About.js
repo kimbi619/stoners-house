@@ -15,12 +15,9 @@ const About = () => {
             </div>
             <div className="aboutTextSection">
                 <div className="descTitle titleLeft">About us</div>
-                <div className="descText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus quia excepturi cum tenetur adipisci aspernatur sequi itaque quos dolore eum?</div>
-                <div className="descText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus quia excepturi cum tenetur adipisci aspernatur sequi itaque quos dolore eum?</div>
-                <div className="descText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus quia excepturi cum tenetur adipisci aspernatur sequi itaque quos dolore eum?</div>
-
-                {/* <div className="descText">{ t("aboutpage.text_two") }</div >
-                <div className="descText">{ t("aboutpage.text_three") }</div> */}
+                <div className="descText">We understand how it feels to be swamped by the daily grind. Getting cannabis shouldn’t be an added hassle to your busy life. It should be easy and stress free.</div>
+                <div className="descText">Our hassle-free cannabis shopping platform features an easy to navigate menu, convenient payment options, and speedy relief delivered to your door. We guarantee that you’ll love our cannabis delivery, Portland!</div>
+                <div className="descText"></div >
             </div>
         </div>
 

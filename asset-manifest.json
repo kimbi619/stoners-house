@@ -1,31 +1,37 @@
 {
   "files": {
-    "main.css": "/stoners-house/static/css/main.ad65d676.chunk.css",
-    "main.js": "/stoners-house/static/js/main.01a662c5.chunk.js",
-    "main.js.map": "/stoners-house/static/js/main.01a662c5.chunk.js.map",
-    "runtime-main.js": "/stoners-house/static/js/runtime-main.55376738.js",
-    "runtime-main.js.map": "/stoners-house/static/js/runtime-main.55376738.js.map",
+    "main.css": "/stoners-house/static/css/main.d2fe311c.chunk.css",
+    "main.js": "/stoners-house/static/js/main.3bae056d.chunk.js",
+    "main.js.map": "/stoners-house/static/js/main.3bae056d.chunk.js.map",
+    "runtime-main.js": "/stoners-house/static/js/runtime-main.b3dcd152.js",
+    "runtime-main.js.map": "/stoners-house/static/js/runtime-main.b3dcd152.js.map",
     "static/css/2.0899a811.chunk.css": "/stoners-house/static/css/2.0899a811.chunk.css",
-    "static/js/2.796d2211.chunk.js": "/stoners-house/static/js/2.796d2211.chunk.js",
-    "static/js/2.796d2211.chunk.js.map": "/stoners-house/static/js/2.796d2211.chunk.js.map",
-    "static/js/3.d5fbc868.chunk.js": "/stoners-house/static/js/3.d5fbc868.chunk.js",
-    "static/js/3.d5fbc868.chunk.js.map": "/stoners-house/static/js/3.d5fbc868.chunk.js.map",
+    "static/js/2.1d91bdad.chunk.js": "/stoners-house/static/js/2.1d91bdad.chunk.js",
+    "static/js/2.1d91bdad.chunk.js.map": "/stoners-house/static/js/2.1d91bdad.chunk.js.map",
+    "static/js/3.e126519e.chunk.js": "/stoners-house/static/js/3.e126519e.chunk.js",
+    "static/js/3.e126519e.chunk.js.map": "/stoners-house/static/js/3.e126519e.chunk.js.map",
     "index.html": "/stoners-house/index.html",
     "static/css/2.0899a811.chunk.css.map": "/stoners-house/static/css/2.0899a811.chunk.css.map",
-    "static/css/main.ad65d676.chunk.css.map": "/stoners-house/static/css/main.ad65d676.chunk.css.map",
-    "static/js/2.796d2211.chunk.js.LICENSE.txt": "/stoners-house/static/js/2.796d2211.chunk.js.LICENSE.txt",
+    "static/css/main.d2fe311c.chunk.css.map": "/stoners-house/static/css/main.d2fe311c.chunk.css.map",
+    "static/js/2.1d91bdad.chunk.js.LICENSE.txt": "/stoners-house/static/js/2.1d91bdad.chunk.js.LICENSE.txt",
+    "static/media/amazonpay.de8be432.svg": "/stoners-house/static/media/amazonpay.de8be432.svg",
     "static/media/bird.fd3474b6.svg": "/stoners-house/static/media/bird.fd3474b6.svg",
     "static/media/semantic.min.css": "/stoners-house/static/media/outline-icons.ddae9b1b.woff",
+    "static/media/cashapp.838f9a91.svg": "/stoners-house/static/media/cashapp.838f9a91.svg",
     "static/media/girlOne.3172159a.jpg": "/stoners-house/static/media/girlOne.3172159a.jpg",
     "static/media/googleLogo.221f782d.png": "/stoners-house/static/media/googleLogo.221f782d.png",
+    "static/media/googlepay.b17e4be1.svg": "/stoners-house/static/media/googlepay.b17e4be1.svg",
     "static/media/i.6d7b5b34.png": "/stoners-house/static/media/i.6d7b5b34.png",
-    "static/media/App.css": "/stoners-house/static/media/loader.e55a1721.gif"
+    "static/media/App.css": "/stoners-house/static/media/loader.e55a1721.gif",
+    "static/media/stripe.d25244aa.svg": "/stoners-house/static/media/stripe.d25244aa.svg",
+    "static/media/vemo.63105437.svg": "/stoners-house/static/media/vemo.63105437.svg",
+    "static/media/zelle.8cd583ed.svg": "/stoners-house/static/media/zelle.8cd583ed.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.55376738.js",
+    "static/js/runtime-main.b3dcd152.js",
     "static/css/2.0899a811.chunk.css",
-    "static/js/2.796d2211.chunk.js",
-    "static/css/main.ad65d676.chunk.css",
-    "static/js/main.01a662c5.chunk.js"
+    "static/js/2.1d91bdad.chunk.js",
+    "static/css/main.d2fe311c.chunk.css",
+    "static/js/main.3bae056d.chunk.js"
   ]
 }
